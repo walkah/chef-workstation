@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _base
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
+if platform_family?("ubuntu")
+  include_recipe "apt"
+elsif platform_family?("mac_os_x")
+  include_recipe "homebrew"
+end
+
+include_recipe "build-essential"
 
