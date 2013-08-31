@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _ruby
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,5 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_ruby"
+include_recipe "ruby_build"
+include_recipe "rbenv::user"
 

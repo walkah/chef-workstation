@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,5 +17,4 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_ruby"
-
+node.default['user']['id'] = "walkah"

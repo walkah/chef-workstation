@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: ruby
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,5 +17,22 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_ruby"
-
+node.default['rbenv']['create_profiled'] = false
+node.default['rbenv']['user_installs'] = [
+  {
+    "user" => node['user']['id'],
+    "rubies" => ["2.0.0-p247", "1.9.2-p320"],
+    "global" => "2.0.0-p247",
+    "gems" => {
+      "2.0.0-p247" => [
+        {"name" => "bundler"},
+        {"name" => "homesick"},
+        {"name" => "lunchy"},
+        {"name" => "tmuxinator"}
+      ],
+      "1.9.2-p320" => [
+        {"name" => "bundler"},
+      ]
+    }
+  }
+]

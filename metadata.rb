@@ -9,8 +9,9 @@ version          '0.1.0'
 supports "mac_os_x"
 
 depends "build-essential"
+depends "dmg"
 depends "homebrew"
 depends "rbenv"
-depends "dmg"
+depends "ruby_build"
 depends "virtualbox"
 
