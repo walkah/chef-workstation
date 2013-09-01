@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _vagrant
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,7 +17,5 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_vagrant"
+include_recipe "vagrant"
+include_recipe "virtualbox"

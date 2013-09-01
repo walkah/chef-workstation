@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: vagrant
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,7 +17,14 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_vagrant"
+node.set['vagrant']['url'] = "http://files.vagrantup.com/packages/7ec0ee1d00a916f80b109a298bab08e391945243/Vagrant-1.2.7.dmg"
+node.set['vagrant']['checksum'] = "75c720eda0cbe6b2a2b19e38757ba4c34fbc57095ab4cc1459609bd242418129"
+node.set['vagrant']['plugins'] = [
+  'vagrant-omnibus', 'vagrant-berkshelf', 'vagrant-vmware-fusion'
+]
+
+
+case node['platform_family']
+when 'mac_os_x'
+  node.set['virtualbox']['url'] = 'http://download.virtualbox.org/virtualbox/4.2.16/VirtualBox-4.2.16-86992-OSX.dmg'
+end
