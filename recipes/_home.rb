@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _home
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,6 +17,20 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
+# Not using chef-homesick to run as non-root (no chef-gem)
+node['homesick_castles'].each do |castle|
+  rbenv_script "homesick clone #{castle['name']}" do
+    user node['user']['id']
+    code "homesick clone #{castle['source']}"
+  end  
+
+  rbenv_script "homesick pull #{castle['name']}" do
+    user node['user']['id']
+    code "homesick pull #{castle['name']} --force"
+  end  
+
+  rbenv_script "homesick symlink #{castle['name']}" do
+    user node['user']['id']
+    code "homesick symlink #{castle['name']} --force"
+  end  
+end

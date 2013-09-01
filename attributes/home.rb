@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,6 +17,9 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
+node.default['homesick_castles'] = [
+  { "name"   => "dotfiles",
+    "source" => "git://github.com/walkah/dotfiles.git",
+  }
+]
+
