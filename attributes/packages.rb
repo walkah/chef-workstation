@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: packages
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,8 +17,30 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_vagrant"
+node.default['brew_taps'] = [
+  'homebrew/binary',
+]
+
+node.default['brew_packages'] = [
+  'dnsmasq',
+  'drush',
+  'emacs',
+  'gist',
+  'git',
+  'git-flow',
+  'heroku-toolbelt',
+  'htop-osx',
+  'hub',
+  'imagemagick',
+  'markdown',
+  'mongodb',
+  'mysql',
+  'openssl',
+  'packer',
+  'postgresql',
+  'pwgen',
+  'redis',
+  'ssh-copy-id',
+  'tmux',
+  'wget'
+]

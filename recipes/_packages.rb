@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _packages
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,8 +17,12 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_vagrant"
+if platform_family?("mac_os_x")
+  node['brew_taps'].each do |tap|
+    homebrew_tap tap
+  end
+
+  node['brew_packages'].each do |pkg|
+    package pkg
+  end
+end
