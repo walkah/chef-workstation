@@ -34,3 +34,13 @@ node['homesick_castles'].each do |castle|
     code "homesick symlink #{castle['name']} --force"
   end  
 end
+
+# sync all specified git repos
+node['repos'].each do |target, repo|
+  git "#{ENV['HOME']}/#{target}" do
+    repository repo['repo']
+    reference repo['revision']
+    action :sync
+    user node['user']['id']
+  end
+end
