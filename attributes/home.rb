@@ -24,10 +24,6 @@ node.default['homesick_castles'] = [
 ]
 
 node.default['repos'] = {
-  ".emacs.d" => { 
-    "repo" => "git@github.com:walkah/emacs.d.git",
-    "revision" => "HEAD"
-  },
   ".oh-my-zsh" => {
     "repo" => "https://github.com/robbyrussell/oh-my-zsh.git",
     "revision" => "HEAD"
