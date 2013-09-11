@@ -19,9 +19,11 @@
 
 node.default['brew_taps'] = [
   'homebrew/binary',
+  'homebrew/dupes',
 ]
 
 node.default['brew_packages'] = [
+  'apple-gcc42',
   'dnsmasq',
   'drush',
   'emacs',

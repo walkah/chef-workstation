@@ -22,7 +22,15 @@ if platform_family?("mac_os_x")
     homebrew_tap tap
   end
 
+  # Hacky work around for CHEF-2288
+  require 'etc'
+  home_dir = Etc.getpwnam(node["user"]["id"]).dir
+
   node['brew_packages'].each do |pkg|
-    package pkg
+    execute "brew install #{pkg}" do
+      user node["user"]["id"]
+      environment ({"HOME" => home_dir})
+      command "brew install #{pkg}"
+    end
   end
 end
