@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 
+# Ensure zsh is the shell
+user node['user']['id'] do
+  shell "/bin/zsh"
+end
+
 # Not using chef-homesick to run as non-root (no chef-gem)
 node['homesick_castles'].each do |castle|
   rbenv_script "homesick clone #{castle['name']}" do
@@ -35,9 +40,12 @@ node['homesick_castles'].each do |castle|
   end  
 end
 
+require 'etc'
+home_dir = Etc.getpwnam(node["user"]["id"]).dir
+
 # sync all specified git repos
 node['repos'].each do |target, repo|
-  git "#{ENV['HOME']}/#{target}" do
+  git "#{home_dir}/#{target}" do
     repository repo['repo']
     reference repo['revision']
     action :sync
