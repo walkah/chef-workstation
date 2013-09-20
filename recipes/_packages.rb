@@ -27,10 +27,20 @@ if platform_family?("mac_os_x")
   home_dir = Etc.getpwnam(node["user"]["id"]).dir
 
   node['brew_packages'].each do |pkg|
-    execute "brew install #{pkg}" do
-      user node["user"]["id"]
-      environment ({"HOME" => home_dir})
-      command "brew install #{pkg}"
+    outdated = system("brew outdated 2>/dev/null | grep -q '^#{pkg}$'")
+
+    if outdated
+      execute "brew upgrade #{pkg}" do
+        user node["user"]["id"]
+        environment ({"HOME" => home_dir})
+        command "brew upgrade #{pkg}"
+      end
+    else
+      execute "brew install #{pkg}" do
+        user node["user"]["id"]
+        environment ({"HOME" => home_dir})
+        command "brew install #{pkg}"
+      end
     end
   end
 end
