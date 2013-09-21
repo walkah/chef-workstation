@@ -43,4 +43,12 @@ if platform_family?("mac_os_x")
       end
     end
   end
+
+  node['brew_casks'].each do |cask|
+    execute "brew cask install #{cask}" do
+      user node["user"]["id"]
+      environment ({"HOME" => home_dir})
+      command "brew cask install #{cask}"
+    end
+  end
 end

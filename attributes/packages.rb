@@ -20,10 +20,12 @@
 node.default['brew_taps'] = [
   'homebrew/binary',
   'homebrew/dupes',
+  'phinze/cask'
 ]
 
 node.default['brew_packages'] = [
   'apple-gcc42',
+  'brew-cask',
   'dnsmasq',
   'drush',
   'emacs',
@@ -45,4 +47,26 @@ node.default['brew_packages'] = [
   'ssh-copy-id',
   'tmux',
   'wget'
+]
+
+node.default['brew_casks'] = [
+  'adium',
+  'airfoil',
+  'alfred',
+  'authy-bluetooth',
+  'cyberduck',
+  'dropbox',
+  'firefox',
+  'github',
+  'google-chrome',
+  'google-hangouts',
+  'iterm2',
+  'lastpass-universal',
+  'minecraft',
+  'nv-alt',
+  'rdio',
+  'sequel-pro',
+  'skype',
+  'vagrant',
+  'virtualbox'
 ]
