@@ -26,6 +26,7 @@ node.default['rbenv']['user_installs'] = [
     "gems" => {
       "2.0.0-p247" => [
         {"name" => "bundler"},
+        {"name" => "git-up"},
         {"name" => "homesick"},
         {"name" => "lunchy"},
         {"name" => "tmuxinator"}
