@@ -57,6 +57,7 @@ node.default['brew_casks'] = [
   'cyberduck',
   'dropbox',
   'firefox',
+  'f-lux',
   'github',
   'google-chrome',
   'google-hangouts',
