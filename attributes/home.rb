@@ -27,5 +27,10 @@ node.default['repos'] = {
   ".oh-my-zsh" => {
     "repo" => "https://github.com/robbyrussell/oh-my-zsh.git",
     "revision" => "HEAD"
+  },
+  ".nvm" => {
+    "repo" => "https://github.com/creationix/nvm.git",
+    "revision" => "HEAD"
   }
+
 }
