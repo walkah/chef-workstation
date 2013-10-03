@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: settings
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,8 +17,17 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_settings"
+node.default['mac_os_x']['settings_user'] = node['user']['id']
+
+node.default['mac_os_x']['settings']['desktop'] = {
+  "domain" => "com.apple.desktop",
+  "Background" => '{default = {ImageFilePath = "/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png"; };}'
+}
+
+node.default['mac_os_x']['settings']['dock'] = {
+  "domain" => "com.apple.dock",
+  "autohide" => true,
+  "magnification" => false,
+  "orientation" => "left"
+}
+

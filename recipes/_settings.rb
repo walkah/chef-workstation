@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _settings
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,8 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_settings"
+if platform?("mac_os_x")
+  include_recipe "mac_os_x::settings"
+end
