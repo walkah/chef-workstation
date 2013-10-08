@@ -44,6 +44,7 @@ node.default['brew_packages'] = [
   'postgresql',
   'pwgen',
   'redis',
+  'solr',
   'ssh-copy-id',
   'tmux',
   'wget'
@@ -68,6 +69,7 @@ node.default['brew_casks'] = [
   'rdio',
   'sequel-pro',
   'skype',
+  'sourcetree',
   'vagrant',
   'virtualbox'
 ]
