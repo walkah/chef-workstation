@@ -44,6 +44,11 @@ if platform_family?("mac_os_x")
     end
   end
 
+  directory "/opt/homebrew-cask/Caskroom" do
+    owner node["user"]["id"]
+    recursive true
+  end
+
   node['brew_casks'].each do |cask|
     execute "brew cask install #{cask}" do
       user node["user"]["id"]
