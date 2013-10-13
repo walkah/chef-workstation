@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "homesick"
+
 # Ensure zsh is the shell
 user node['user']['id'] do
   shell "/bin/zsh"
@@ -24,20 +26,11 @@ end
 
 # Not using chef-homesick to run as non-root (no chef-gem)
 node['homesick_castles'].each do |castle|
-  rbenv_script "homesick clone #{castle['name']}" do
-    user node['user']['id']
-    code "homesick clone #{castle['source']}"
-  end  
-
-  rbenv_script "homesick pull #{castle['name']}" do
-    user node['user']['id']
-    code "homesick pull #{castle['name']} --force"
-  end  
-
-  rbenv_script "homesick symlink #{castle['name']}" do
-    user node['user']['id']
-    code "homesick symlink #{castle['name']} --force"
-  end  
+  homesick_castle castle['name'] do
+    user    node['user']['id']
+    source  castle['source']
+    action  :update
+  end
 end
 
 require 'etc'

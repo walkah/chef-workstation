@@ -19,7 +19,7 @@
 
 node.default['homesick_castles'] = [
   { "name"   => "dotfiles",
-    "source" => "git@github.com:walkah/dotfiles.git",
+    "source" => "https://github.com/walkah/dotfiles.git",
   }
 ]
 
