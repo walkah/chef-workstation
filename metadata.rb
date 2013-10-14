@@ -13,6 +13,4 @@ depends "build-essential", "~> 1.4.2"
 depends "homebrew",        "~> 1.4.0"
 depends "homesick",        "~> 0.4.0"
 depends "mac_os_x",        "~> 1.4.2"
-depends "rbenv"
-depends "ruby_build",      "~> 0.8.0"
-
+depends "rvm"

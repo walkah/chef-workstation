@@ -17,23 +17,24 @@
 # limitations under the License.
 #
 
-node.default['rbenv']['create_profiled'] = false
-node.default['rbenv']['user_installs'] = [
-  {
-    "user" => node['user']['id'],
-    "rubies" => ["2.0.0-p247", "1.9.2-p320"],
-    "global" => "2.0.0-p247",
-    "gems" => {
-      "2.0.0-p247" => [
-        {"name" => "bundler"},
-        {"name" => "git-up"},
-        {"name" => "homesick"},
-        {"name" => "lunchy"},
-        {"name" => "tmuxinator"}
-      ],
-      "1.9.2-p320" => [
-        {"name" => "bundler"},
-      ]
-    }
+node.default['rvm']['user_installs'] = [
+  { 'user'            => node['user']['id'],
+    'upgrade'         => "stable",
+    'default_ruby'    => "2.0.0",
+    'rubies' => [
+      "2.0.0",
+    ],
+    'rvmrc'         => {
+      'rvm_project_rvmrc'             => 1,
+      'rvm_gemset_create_on_use_flag' => 1,
+      'rvm_pretty_print_flag'         => 1
+    },
+    'global_gems'     => [
+      { "name" => "bundler"},
+      { "name" => "git-up" },
+      { "name" => "homesick" },
+      { "name" => "lunchy" },
+      { "name" => "tmuxinator" }
+    ]
   }
 ]
