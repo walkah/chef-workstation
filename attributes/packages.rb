@@ -62,6 +62,7 @@ node.default['brew_casks'] = [
   'github',
   'google-chrome',
   'google-hangouts',
+  'hazel',
   'iterm2',
   'lastpass-universal',
   'minecraft',
