@@ -10,7 +10,7 @@ supports "mac_os_x"
 
 depends "apt",             "~> 2.0.0"
 depends "build-essential", "~> 1.4.2"
-depends "homebrew",        "~> 1.4.0"
+depends "homebrew"         
 depends "homesick",        "~> 0.4.0"
 depends "mac_os_x",        "~> 1.4.2"
 depends "rvm"

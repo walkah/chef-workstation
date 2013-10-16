@@ -22,25 +22,9 @@ if platform_family?("mac_os_x")
     homebrew_tap tap
   end
 
-  # Hacky work around for CHEF-2288
-  require 'etc'
-  home_dir = Etc.getpwnam(node["user"]["id"]).dir
-
   node['brew_packages'].each do |pkg|
-    outdated = system("brew outdated 2>/dev/null | grep -q '^#{pkg}$'")
-
-    if outdated
-      execute "brew upgrade #{pkg}" do
-        user node["user"]["id"]
-        environment ({"HOME" => home_dir})
-        command "brew upgrade #{pkg}"
-      end
-    else
-      execute "brew install #{pkg}" do
-        user node["user"]["id"]
-        environment ({"HOME" => home_dir})
-        command "brew install #{pkg}"
-      end
+    package pkg do
+      action :install
     end
   end
 
@@ -49,10 +33,14 @@ if platform_family?("mac_os_x")
     recursive true
   end
 
+  # Hacky work around for CHEF-2288
+  require 'etc'
+  home_dir = Etc.getpwnam(node["user"]["id"]).dir
+
   node['brew_casks'].each do |cask|
     execute "brew cask install #{cask}" do
       user node["user"]["id"]
-      environment ({"HOME" => home_dir})
+      environment({"HOME" => home_dir})
       command "brew cask install #{cask}"
     end
   end
