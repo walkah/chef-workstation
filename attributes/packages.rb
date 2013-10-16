@@ -28,7 +28,6 @@ node.default['brew_packages'] = [
   'brew-cask',
   'dnsmasq',
   'drush',
-  'emacs',
   'gist',
   'git',
   'git-flow',

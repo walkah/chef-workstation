@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _emacs
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,9 +17,33 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_home"
-include_recipe "workstation::_emacs"
-include_recipe "workstation::_settings"
+package "emacs" do
+  options "--cocoa"
+  action :install
+end
+
+require 'etc'
+home_dir = Etc.getpwnam(node["user"]["id"]).dir
+
+# set up cask
+git "#{home_dir}/.cask" do
+  repository "https://github.com/cask/cask.git"
+  reference "master"
+  action :sync
+end
+
+# cask install 
+execute "cask install" do
+  user node["user"]["id"]
+  cwd "#{home_dir}/.emacs.d"
+  environment({"HOME" => home_dir})
+  command "cask install"
+end
+
+# cask update
+execute "cask update" do
+  user node["user"]["id"]
+  cwd "#{home_dir}/.emacs.d"
+  environment({"HOME" => home_dir})
+  command "cask update"
+end
