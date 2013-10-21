@@ -51,7 +51,6 @@ node.default['brew_packages'] = [
 
 node.default['brew_casks'] = [
   'adium',
-  'airfoil',
   'alfred',
   'authy-bluetooth',
   'cyberduck',
