@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "workstation"
-  config.vm.box = "MacOSX10.8"
+  config.vm.box = "MacOSX10.9"
 
   config.vm.network :private_network, ip: "192.168.103.6"
 
