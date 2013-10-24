@@ -5,8 +5,6 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "workstation"
   config.vm.box = "MacOSX10.9"
 
-  config.vm.network :private_network, ip: "192.168.103.6"
-
   config.omnibus.chef_version = :latest
 
   config.berkshelf.enabled = true
