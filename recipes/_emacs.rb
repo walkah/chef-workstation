@@ -37,7 +37,7 @@ execute "cask install" do
   user node["user"]["id"]
   cwd "#{home_dir}/.emacs.d"
   environment({"HOME" => home_dir})
-  command "cask install"
+  command "#{home_dir}/.cask/bin/cask install"
 end
 
 # cask update
@@ -45,5 +45,5 @@ execute "cask update" do
   user node["user"]["id"]
   cwd "#{home_dir}/.emacs.d"
   environment({"HOME" => home_dir})
-  command "cask update"
+  command "#{home_dir}/.cask/bin/cask update"
 end
