@@ -65,6 +65,7 @@ node.default['brew_casks'] = [
   'lastpass-universal',
   'minecraft',
   'nv-alt',
+  'rescue-time',
   'rdio',
   'sequel-pro',
   'skype',
