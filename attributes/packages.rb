@@ -40,7 +40,6 @@ node.default['brew_packages'] = [
   'mysql',
   'openssl',
   'packer',
-  'postgresql',
   'pwgen',
   'redis',
   'solr',
