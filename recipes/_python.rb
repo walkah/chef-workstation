@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _python
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,10 +17,12 @@
 # limitations under the License.
 #
 
-include_recipe "workstation::_base"
-include_recipe "workstation::_packages"
-include_recipe "workstation::_ruby"
-include_recipe "workstation::_python"
-include_recipe "workstation::_home"
-include_recipe "workstation::_emacs"
-include_recipe "workstation::_settings"
+if platform_family?("mac_os_x")
+  package "python"
+  package "python3"
+
+  execute "installing virtualenvwrapper" do
+    command "/usr/local/bin/pip install virtualenvwrapper"
+    user node['user']['id']
+  end
+end
