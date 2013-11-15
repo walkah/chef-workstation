@@ -4,9 +4,9 @@
       "path": "."
     },
     "homebrew": {
-      "locked_version": "1.5.1",
+      "locked_version": "1.5.3",
       "git": "https://github.com/walkah/chef-homebrew.git",
-      "ref": "ce09cdebc43462b0e5a5842edacc2620e526e0ff"
+      "ref": "5db89e6198c3380d36f7a93116d4e113f2bef22c"
     },
     "rvm": {
       "locked_version": "0.9.1",
