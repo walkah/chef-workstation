@@ -8,7 +8,7 @@ role_path        chef_root + 'roles'
 data_bag_path    chef_root + 'data_bags'
 
 # Override defaults in /var that aren't user-writable
-file_cache_path  var + 'cache'
+file_cache_path  (var + 'cache').to_s
 file_backup_path var + 'backup'
 checksum_path    file_cache_path + 'checksums'
 
