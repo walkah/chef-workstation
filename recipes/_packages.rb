@@ -33,15 +33,7 @@ if platform_family?("mac_os_x")
     recursive true
   end
 
-  # Hacky work around for CHEF-2288
-  require 'etc'
-  home_dir = Etc.getpwnam(node["user"]["id"]).dir
-
   node['brew_casks'].each do |cask|
-    execute "brew cask install #{cask}" do
-      user node["user"]["id"]
-      environment({"HOME" => home_dir})
-      command "brew cask install #{cask}"
-    end
+    homebrew_cask cask
   end
 end
