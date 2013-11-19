@@ -37,6 +37,7 @@ node.default['brew_packages'] = [
   'imagemagick',
   'markdown',
   'mongodb',
+  'mtr',
   'mysql',
   'openssl',
   'packer',
