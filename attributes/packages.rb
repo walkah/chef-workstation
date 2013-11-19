@@ -71,5 +71,6 @@ node.default['brew_casks'] = [
   'skype',
   'sourcetree',
   'vagrant',
-  'virtualbox'
+  'virtualbox',
+  'vmware-fusion'
 ]
