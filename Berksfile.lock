@@ -43,6 +43,9 @@
     "mac_os_x": {
       "locked_version": "1.4.2"
     },
+    "nvm": {
+      "locked_version": "0.1.0"
+    },
     "java": {
       "locked_version": "1.15.4"
     },

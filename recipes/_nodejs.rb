@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Attributes:: default
+# Recipe:: _nodejs
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,16 +17,15 @@
 # limitations under the License.
 #
 
-node.default['homesick']['gem_version'] = '~> 0.9.5'
-node.default['homesick_castles'] = [
-  { "name"   => "dotfiles",
-    "source" => "https://github.com/walkah/dotfiles.git",
-  }
-]
 
-node.default['repos'] = {
-  ".oh-my-zsh" => {
-    "repo" => "https://github.com/robbyrussell/oh-my-zsh.git",
-    "revision" => "HEAD"
-  }
-}
+git node['nvm']['directory'] do
+  repo "https://github.com/creationix/nvm.git"
+  reference "master"
+  action :sync
+end
+
+nvm_install node['nvm']['version'] do
+    from_source false
+    alias_as_default true
+    action :create
+end
