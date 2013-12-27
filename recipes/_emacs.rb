@@ -27,8 +27,8 @@ home_dir = Etc.getpwnam(node["user"]["id"]).dir
 
 # set up cask
 git "#{home_dir}/.cask" do
-  repository "https://github.com/cask/cask.git"
-  reference "master"
+  repository node['emacs']['cask']['repository']
+  reference node['emacs']['cask']['version']
   action :sync
 end
 
