@@ -20,7 +20,8 @@
 node.default['brew_taps'] = [
   'homebrew/binary',
   'homebrew/dupes',
-  'phinze/cask'
+  'phinze/cask',
+  'caskroom/fonts'
 ]
 
 node.default['brew_packages'] = [
