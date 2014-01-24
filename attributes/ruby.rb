@@ -32,7 +32,6 @@ node.default['rvm']['user_installs'] = [
     'global_gems'     => [
       { "name" => "bundler"},
       { "name" => "chef"},
-      { "name" => "git-up" },
       { "name" => "homesick" },
       { "name" => "lunchy" },
       { "name" => "tmuxinator" }
