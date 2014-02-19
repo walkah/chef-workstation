@@ -8,10 +8,10 @@
       "git": "https://github.com/walkah/chef-homebrew.git",
       "ref": "959de42f55c714f96dd4bc27cd4a56db57a920a1"
     },
-    "rvm": {
-      "locked_version": "0.9.1",
-      "git": "https://github.com/fnichol/chef-rvm.git",
-      "ref": "26ad5c043c70ea98855a049fbbacb7ffc5ad73e3"
+    "rbenv": {
+      "locked_version": "0.7.3",
+      "git": "https://github.com/fnichol/chef-rbenv.git",
+      "ref": "9afb4e5da2e6212504a12de3bbbd410cd96100f6"
     },
     "apt": {
       "locked_version": "2.0.0"
@@ -20,16 +20,13 @@
       "locked_version": "0.4.0"
     },
     "git": {
-      "locked_version": "2.7.0"
+      "locked_version": "2.9.0"
     },
     "dmg": {
       "locked_version": "2.0.8"
     },
     "build-essential": {
       "locked_version": "1.4.2"
-    },
-    "yum": {
-      "locked_version": "2.4.2"
     },
     "windows": {
       "locked_version": "1.11.0"
@@ -40,20 +37,26 @@
     "runit": {
       "locked_version": "1.4.0"
     },
+    "yum": {
+      "locked_version": "3.0.6"
+    },
+    "yum-epel": {
+      "locked_version": "0.2.0"
+    },
     "mac_os_x": {
       "locked_version": "1.4.2"
     },
     "nvm": {
       "locked_version": "0.1.0"
     },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
     "java": {
       "locked_version": "1.15.4"
     },
     "aws": {
       "locked_version": "1.0.0"
-    },
-    "chef_gem": {
-      "locked_version": "0.1.0"
     }
   }
 }

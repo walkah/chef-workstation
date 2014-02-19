@@ -17,25 +17,22 @@
 # limitations under the License.
 #
 
-node.default['rvm']['user_installs'] = [
+node.default['rbenv']['create_profiled'] = false
+node.default['rbenv']['user_installs'] = [
   { 'user'            => node['user']['id'],
-    'upgrade'         => "stable",
-    'default_ruby'    => "2.0.0",
+    'global'    => "2.0.0-p353",
     'rubies' => [
-      "2.0.0",
+      "2.0.0-p353",
     ],
-    'rvmrc'         => {
-      'rvm_project_rvmrc'             => 1,
-      'rvm_gemset_create_on_use_flag' => 1,
-      'rvm_pretty_print_flag'         => 1
-    },
-    'global_gems'     => [
-      { "name" => "bundler"},
-      { "name" => "chef"},
-      { "name" => "git-up"},
-      { "name" => "homesick" },
-      { "name" => "lunchy" },
-      { "name" => "tmuxinator" }
-    ]
+    'gems'     => {
+      '2.0.0-p353' => [
+        { "name" => "bundler"},
+        { "name" => "chef"},
+        { "name" => "git-up"},
+        { "name" => "homesick" },
+        { "name" => "lunchy" },
+        { "name" => "tmuxinator" }
+      ]
+    }
   }
 ]
