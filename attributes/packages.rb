@@ -59,7 +59,7 @@ node.default['brew_casks'] = %w(
   dropbox
   firefox
   font-inconsolata
-  f-lux
+  flux
   github
   google-chrome
   google-hangouts
