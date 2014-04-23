@@ -25,7 +25,6 @@ node.default['brew_taps'] = %w(
 )
 
 node.default['brew_packages'] = %w(
-  apple-gcc42
   brew-cask
   dnsmasq
   drush
