@@ -20,7 +20,7 @@
 node.default['brew_taps'] = %w(
   homebrew/binary
   homebrew/dupes
-  phinze/cask
+  caskroom/cask
   caskroom/fonts
 )
 
