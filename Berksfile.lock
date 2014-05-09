@@ -1,8 +1,4 @@
 DEPENDENCIES
-  homebrew
-    git: https://github.com/walkah/chef-homebrew.git
-    revision: 959de42f55c714f96dd4bc27cd4a56db57a920a1
-    branch: master
   rvm
     git: https://github.com/fnichol/chef-rvm.git
     revision: dd58087e7399097a9b9df4e2e7235908aace2afd
@@ -24,7 +20,7 @@ GRAPH
     windows (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  homebrew (1.5.5)
+  homebrew (1.6.4)
   homesick (0.4.0)
     git (>= 0.0.0)
   java (1.22.0)
@@ -40,9 +36,9 @@ GRAPH
     java (>= 0.0.0)
   windows (1.30.2)
     chef_handler (>= 0.0.0)
-  workstation (0.9.12)
+  workstation (0.9.13)
     apt (~> 2.0.0)
-    homebrew (>= 0.0.0)
+    homebrew (~> 1.6.4)
     homesick (~> 0.4.0)
     mac_os_x (~> 1.4.2)
     nvm (~> 0.1.0)
