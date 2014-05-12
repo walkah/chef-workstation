@@ -27,9 +27,9 @@ end
 # Not using chef-homesick to run as non-root (no chef-gem)
 node['homesick_castles'].each do |castle|
   homesick_castle castle['name'] do
-    user    node['user']['id']
-    source  castle['source']
-    action  :update
+    user node['user']['id']
+    source castle['source']
+    action :update
   end
 end
 
