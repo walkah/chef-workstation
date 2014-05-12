@@ -1,8 +1,8 @@
 AllCops:
-  Excludes:
-    - cookbooks/**
-    - var/**
-    - vendor/**
+  Exclude:
+    - cookbooks/**/*
+    - var/**/*
+    - vendor/**/*
 
 AlignParameters:
   Enabled: false
