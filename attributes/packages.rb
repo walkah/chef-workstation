@@ -53,7 +53,6 @@ node.default['brew_casks'] = %w(
   adium
   alfred
   authy-bluetooth
-  cyberduck
   delivery-status
   dropbox
   firefox
