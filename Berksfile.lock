@@ -36,7 +36,7 @@ GRAPH
     java (>= 0.0.0)
   windows (1.31.0)
     chef_handler (>= 0.0.0)
-  workstation (0.9.16)
+  workstation (0.9.17)
     apt (~> 2.4.0)
     homebrew (~> 1.7.2)
     homesick (~> 0.4.0)
