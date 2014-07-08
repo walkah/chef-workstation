@@ -18,4 +18,4 @@
 #
 
 default['emacs']['cask']['repository'] = 'https://github.com/cask/cask.git'
-default['emacs']['cask']['version'] = 'v0.5.1'
+default['emacs']['cask']['version'] = 'v0.7.0'
