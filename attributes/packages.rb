@@ -17,14 +17,13 @@
 # limitations under the License.
 #
 
-node.default['brew_taps'] = %w(
+default['brew_taps'] = %w(
   homebrew/binary
   homebrew/dupes
-  caskroom/cask
   caskroom/fonts
 )
 
-node.default['brew_packages'] = %w(
+default['homebrew']['formula'] = %w(
   brew-cask
   dnsmasq
   drush
@@ -49,7 +48,7 @@ node.default['brew_packages'] = %w(
   wget
 )
 
-node.default['brew_casks'] = %w(
+default['homebrew']['casks'] = %w(
   adium
   alfred
   authy-bluetooth

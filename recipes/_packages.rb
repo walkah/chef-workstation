@@ -22,18 +22,6 @@ if platform_family?('mac_os_x')
     homebrew_tap tap
   end
 
-  node['brew_packages'].each do |pkg|
-    package pkg do
-      action :install
-    end
-  end
-
-  directory '/opt/homebrew-cask/Caskroom' do
-    owner node['user']['id']
-    recursive true
-  end
-
-  node['brew_casks'].each do |cask|
-    homebrew_cask cask
-  end
+  include_recipe "homebrew::install_formulas"
+  include_recipe "homebrew::install_casks"
 end
