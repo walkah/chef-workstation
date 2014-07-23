@@ -22,6 +22,6 @@ if platform_family?('mac_os_x')
     homebrew_tap tap
   end
 
-  include_recipe "homebrew::install_formulas"
-  include_recipe "homebrew::install_casks"
+  include_recipe 'homebrew::install_formulas'
+  include_recipe 'homebrew::install_casks'
 end
