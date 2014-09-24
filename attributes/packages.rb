@@ -51,7 +51,6 @@ default['homebrew']['formula'] = %w(
 default['homebrew']['casks'] = %w(
   adium
   alfred
-  authy-bluetooth
   delivery-status
   dropbox
   firefox
@@ -63,13 +62,11 @@ default['homebrew']['casks'] = %w(
   hazel
   iterm2
   lastpass-universal
-  minecraft
   nvalt
   rescuetime
   rdio
   sequel-pro
   skype
-  sourcetree
   vagrant
   virtualbox
   vmware-fusion
