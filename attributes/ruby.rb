@@ -17,12 +17,17 @@
 # limitations under the License.
 #
 
-node.default['rvm']['user_installs'] = [
-  { 'user'            => node['user']['id'],
-    'upgrade'         => 'stable',
+node.set['rvm']['installs'] = {
+  node['user']['id'] => true
+}
+
+default['rvm']['user_installs'] = [
+  {
+    'user' => node['user']['id'],
+    'install_rubies'  => true,
     'default_ruby'    => '2.1.3',
     'rubies' => ['2.1.3', '2.0.0'],
-    'rvmrc'         => {
+    'rvmrc_env'         => {
       'rvm_project_rvmrc'             => 1,
       'rvm_gemset_create_on_use_flag' => 1,
       'rvm_pretty_print_flag'         => 1

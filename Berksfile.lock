@@ -1,13 +1,14 @@
 DEPENDENCIES
   rvm
     git: https://github.com/fnichol/chef-rvm.git
-    revision: 3d1c3dda01d5dee02a99d53783f2f11d5a0f195d
+    revision: ade745350b6239b89fd0dd7c809eca518505e580
     branch: master
   workstation
     path: .
     metadata: true
 
 GRAPH
+  apt (2.6.0)
   build-essential (2.0.6)
   chef_gem (0.1.0)
   chef_handler (1.1.6)
@@ -30,12 +31,13 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  rvm (0.9.3)
+  rvm (0.10.1)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
   windows (1.34.6)
     chef_handler (>= 0.0.0)
-  workstation (0.9.19)
+  workstation (0.10.0)
+    apt (>= 0.0.0)
     homebrew (~> 1.9.0)
     homesick (~> 0.4.0)
     mac_os_x (~> 1.4.6)
