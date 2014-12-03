@@ -61,7 +61,7 @@ default['homebrew']['casks'] = %w(
   google-hangouts
   hazel
   iterm2
-  lastpass-universal
+  lastpass
   nvalt
   rescuetime
   rdio
