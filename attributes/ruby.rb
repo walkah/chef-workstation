@@ -26,7 +26,7 @@ default['rvm']['user_installs'] = [
     'user' => node['user']['id'],
     'install_rubies'  => true,
     'default_ruby'    => '2.1.5',
-    'rubies' => ['2.1.5'],
+    'rubies' => ['2.1.5', '2.2.0'],
     'rvmrc_env'         => {
       'rvm_project_rvmrc'             => 1,
       'rvm_gemset_create_on_use_flag' => 1,
@@ -36,7 +36,8 @@ default['rvm']['user_installs'] = [
       { 'name' => 'git-up' },
       { 'name' => 'homesick' },
       { 'name' => 'lunchy' },
-      { 'name' => 'tmuxinator' }
+      { 'name' => 'tmuxinator' },
+      { 'name' => 'travis' }
     ]
   }
 ]

@@ -1,22 +1,22 @@
 DEPENDENCIES
   rvm
     git: https://github.com/fnichol/chef-rvm.git
-    revision: 8a877e9b497f8fb06dfe6f5975561331b3924243
+    revision: 85b6501f11e10bf9aab897da497b185186a9a040
     branch: master
   workstation
     path: .
     metadata: true
 
 GRAPH
-  apt (2.6.0)
+  apt (2.6.1)
   build-essential (2.1.3)
   chef_gem (0.1.0)
   chef_handler (1.1.6)
   dmg (2.2.2)
-  git (4.0.2)
+  git (4.1.0)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
-    runit (>= 1.0.0)
+    runit (>= 1.0)
     windows (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
@@ -27,14 +27,14 @@ GRAPH
   mac_os_x (1.4.6)
   nvm (0.1.0)
     git (>= 2.1.0)
-  runit (1.5.10)
+  runit (1.5.12)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   rvm (0.10.1)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
-  windows (1.34.8)
+  windows (1.36.1)
     chef_handler (>= 0.0.0)
   workstation (0.10.3)
     apt (>= 0.0.0)
@@ -43,6 +43,6 @@ GRAPH
     mac_os_x (~> 1.4.6)
     nvm (~> 0.1.0)
     rvm (>= 0.0.0)
-  yum (3.5.1)
+  yum (3.5.2)
   yum-epel (0.5.3)
     yum (~> 3.0)
