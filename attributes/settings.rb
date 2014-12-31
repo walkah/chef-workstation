@@ -19,11 +19,6 @@
 
 node.default['mac_os_x']['settings_user'] = node['user']['id']
 
-node.default['mac_os_x']['settings']['desktop'] = {
-  'domain' => 'com.apple.desktop',
-  'Background' => '{default = {ImageFilePath = "/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png"; };}'
-}
-
 node.default['mac_os_x']['settings']['dock'] = {
   'domain' => 'com.apple.dock',
   'autohide' => true,
