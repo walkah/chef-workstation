@@ -51,7 +51,6 @@ default['homebrew']['formula'] = %w(
 default['homebrew']['casks'] = %w(
   adium
   alfred
-  delivery-status
   dropbox
   firefox
   font-inconsolata
