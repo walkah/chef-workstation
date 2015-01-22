@@ -20,10 +20,11 @@
 default['brew_taps'] = %w(
   homebrew/binary
   homebrew/dupes
+  homebrew/php
   caskroom/fonts
 )
 
-default['homebrew']['formula'] = %w(
+default['homebrew']['formulas'] = %w(
   brew-cask
   dnsmasq
   drush
@@ -50,7 +51,9 @@ default['homebrew']['formula'] = %w(
 
 default['homebrew']['casks'] = %w(
   adium
+  adobe-creative-cloud
   alfred
+  atom
   dropbox
   firefox
   font-inconsolata
@@ -59,6 +62,7 @@ default['homebrew']['casks'] = %w(
   google-chrome
   google-hangouts
   hazel
+  istat-menus
   iterm2
   lastpass
   nvalt
@@ -66,6 +70,7 @@ default['homebrew']['casks'] = %w(
   rdio
   sequel-pro
   skype
+  slack
   vagrant
   virtualbox
   vmware-fusion

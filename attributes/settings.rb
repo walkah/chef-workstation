@@ -25,3 +25,16 @@ node.default['mac_os_x']['settings']['dock'] = {
   'magnification' => false,
   'orientation' => 'left'
 }
+
+node.default['mac_os_x']['settings']['finder'] = {
+  'domain' => 'com.apple.finder',
+  'ShowHardDrivesOnDesktop' => true,
+  'ShowMountedServersOnDesktop' => true,
+  'ShowRemovableMediaOnDesktop' => true,  
+}
+
+node.default['mac_os_x']['settings']['screensaver'] = {
+  'domain' => 'com.apple.screensaver',
+  'askForPassword' => 1,
+  'askForPasswordDelay' => 0
+}
