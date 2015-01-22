@@ -30,7 +30,7 @@ node.default['mac_os_x']['settings']['finder'] = {
   'domain' => 'com.apple.finder',
   'ShowHardDrivesOnDesktop' => true,
   'ShowMountedServersOnDesktop' => true,
-  'ShowRemovableMediaOnDesktop' => true,  
+  'ShowRemovableMediaOnDesktop' => true
 }
 
 node.default['mac_os_x']['settings']['screensaver'] = {
