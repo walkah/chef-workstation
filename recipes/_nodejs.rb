@@ -18,13 +18,17 @@
 #
 
 git node['nvm']['directory'] do
+  user node['user']['id']
   repo 'https://github.com/creationix/nvm.git'
   reference 'master'
   action :sync
 end
 
-nvm_install node['nvm']['version'] do
-  from_source false
-  alias_as_default true
-  action :create
+bash "Installing node.js #{node['nvm']['version']}..." do
+  user node['user']['id']
+  code <<-EOH
+  #{node['nvm']['source']}
+  nvm install #{node['nvm']['version']}
+  nvm alias default #{node['nvm']['version']}
+  EOH
 end
