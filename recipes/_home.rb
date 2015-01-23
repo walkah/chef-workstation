@@ -17,8 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe 'homesick'
-
 # Ensure zsh is the shell
 user node['user']['id'] do
   shell '/bin/zsh'
@@ -26,10 +24,13 @@ end
 
 # Not using chef-homesick to run as non-root (no chef-gem)
 node['homesick_castles'].each do |castle|
-  homesick_castle castle['name'] do
+  bash "Adding homesick castle #{castle['name']}" do
     user node['user']['id']
-    source castle['source']
-    action :update
+    code <<-EOH
+    homesick clone #{castle['source']} --force
+    homesick pull #{castle['name']} --force
+    homesick symlink #{castle['name']} --force
+    EOH
   end
 end
 
