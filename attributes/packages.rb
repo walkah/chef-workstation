@@ -28,9 +28,11 @@ default['homebrew']['formulas'] = %w(
   brew-cask
   dnsmasq
   drush
+  elasticsearch
   gist
   git
   git-flow
+  gsl
   heroku-toolbelt
   htop-osx
   hub
@@ -41,6 +43,7 @@ default['homebrew']['formulas'] = %w(
   mysql
   openssl
   packer
+  postgresql
   pwgen
   redis
   solr
@@ -54,9 +57,11 @@ default['homebrew']['casks'] = %w(
   adobe-creative-cloud
   alfred
   atom
+  dash
   dropbox
   firefox
   font-inconsolata
+  flowdock
   flux
   github
   google-chrome
@@ -64,6 +69,7 @@ default['homebrew']['casks'] = %w(
   hazel
   istat-menus
   iterm2
+  java
   lastpass
   nvalt
   rescuetime
@@ -71,6 +77,8 @@ default['homebrew']['casks'] = %w(
   sequel-pro
   skype
   slack
+  sonos
+  todoist
   vagrant
   virtualbox
   vmware-fusion
