@@ -22,3 +22,5 @@ if platform_family?('ubuntu')
 elsif platform_family?('mac_os_x')
   include_recipe 'homebrew'
 end
+
+include_recipe 'sudo'
