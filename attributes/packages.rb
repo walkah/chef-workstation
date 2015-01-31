@@ -2,7 +2,7 @@
 # Cookbook Name:: workstation
 # Attributes:: packages
 #
-# Copyright (C) 2013 James Walker
+# Copyright (C) 2013-2015 James Walker
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-default['brew_taps'] = %w(
+default['homebrew']['taps'] = %w(
   homebrew/binary
   homebrew/dupes
   homebrew/php

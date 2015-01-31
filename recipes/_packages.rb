@@ -18,10 +18,7 @@
 #
 
 if platform_family?('mac_os_x')
-  node['brew_taps'].each do |tap|
-    homebrew_tap tap
-  end
-
+  include_recipe 'homebrew::install_taps'
   include_recipe 'homebrew::install_casks'
   include_recipe 'homebrew::install_formulas'
 end
