@@ -19,7 +19,7 @@ GRAPH
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
   sudo (2.7.1)
-  workstation (0.10.10)
+  workstation (0.10.11)
     apt (>= 0.0.0)
     homebrew (~> 1.12.0)
     mac_os_x (~> 1.4.6)

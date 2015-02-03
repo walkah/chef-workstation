@@ -57,6 +57,7 @@ default['homebrew']['casks'] = %w(
   adobe-creative-cloud
   alfred
   atom
+  chefdk
   dash
   dropbox
   firefox
