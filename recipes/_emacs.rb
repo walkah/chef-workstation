@@ -22,15 +22,10 @@ package 'emacs' do
   action :install
 end
 
+package 'cask'
+
 require 'etc'
 home_dir = Etc.getpwnam(node['user']['id']).dir
-
-# set up cask
-git "#{home_dir}/.cask" do
-  repository node['emacs']['cask']['repository']
-  reference node['emacs']['cask']['version']
-  action :sync
-end
 
 # cask install
 execute 'cask install' do
