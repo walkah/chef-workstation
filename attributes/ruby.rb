@@ -36,7 +36,7 @@ default['rvm']['user_installs'] = [
       { 'name' => 'git-up' },
       { 'name' => 'homesick' },
       { 'name' => 'lunchy' },
-      { 'name' => 'timetrap'},
+      { 'name' => 'timetrap' },
       { 'name' => 'tmuxinator' },
       { 'name' => 'travis' }
     ]
