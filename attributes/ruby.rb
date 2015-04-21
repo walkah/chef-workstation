@@ -25,14 +25,15 @@ default['rvm']['user_installs'] = [
   {
     'user' => node['user']['id'],
     'install_rubies'  => true,
-    'default_ruby'    => '2.2.1',
-    'rubies' => ['2.1.5', '2.2.1'],
+    'default_ruby'    => '2.2.2',
+    'rubies' => ['2.1.5', '2.2.2'],
     'rvmrc_env'         => {
       'rvm_project_rvmrc'             => 1,
       'rvm_gemset_create_on_use_flag' => 1,
       'rvm_pretty_print_flag'         => 1
     },
     'global_gems'     => [
+      { 'name' => 'bundler' },
       { 'name' => 'git-up' },
       { 'name' => 'homesick' },
       { 'name' => 'lunchy' },

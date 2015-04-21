@@ -9,7 +9,7 @@ DEPENDENCIES
 
 GRAPH
   apt (2.7.0)
-  build-essential (2.2.2)
+  build-essential (2.2.3)
   chef_gem (0.1.0)
   homebrew (1.12.0)
     build-essential (>= 2.1.2)
@@ -19,9 +19,9 @@ GRAPH
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
   sudo (2.7.1)
-  workstation (0.10.12)
+  workstation (0.10.14)
     apt (>= 0.0.0)
-    homebrew (~> 1.12.0)
-    mac_os_x (~> 1.4.6)
+    homebrew (>= 0.0.0)
+    mac_os_x (>= 0.0.0)
     rvm (>= 0.0.0)
-    sudo (~> 2.7.1)
+    sudo (>= 0.0.0)
