@@ -26,6 +26,8 @@ default['homebrew']['taps'] = %w(
 
 default['homebrew']['formulas'] = %w(
   brew-cask
+  composer
+  coreutils
   dnsmasq
   drush
   elasticsearch
@@ -43,6 +45,7 @@ default['homebrew']['formulas'] = %w(
   mysql
   openssl
   packer
+  php56
   postgresql
   pwgen
   redis
