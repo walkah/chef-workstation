@@ -22,4 +22,4 @@ home_dir = Etc.getpwnam(node['user']['id']).dir
 
 node.default['nvm']['directory'] = "#{home_dir}/.nvm"
 node.default['nvm']['source'] = "source #{home_dir}/.nvm/nvm.sh"
-node.default['nvm']['version'] = '0.10'
+node.default['nvm']['version'] = '0.12'
