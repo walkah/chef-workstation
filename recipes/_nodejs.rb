@@ -17,18 +17,48 @@
 # limitations under the License.
 #
 
-git node['nvm']['directory'] do
-  user node['user']['id']
-  repo 'https://github.com/creationix/nvm.git'
-  reference 'master'
-  action :sync
-end
+node['nvm']['user_installs'].each do |install|
+  # install nvm for user
+  require 'etc'
+  home_dir = Etc.getpwnam(node['user']['id']).dir
+  nvm_dir = "#{home_dir}/.nvm"
+  git nvm_dir do
+    user install['user']
+    repo 'https://github.com/creationix/nvm.git'
+    reference 'master'
+    action :sync
+  end
 
-bash "Installing node.js #{node['nvm']['version']}..." do
-  user node['user']['id']
-  code <<-EOH
-  #{node['nvm']['source']}
-  nvm install #{node['nvm']['version']}
-  nvm alias default #{node['nvm']['version']}
-  EOH
+  # install versions
+  install['versions'].each do |version|
+    bash "Installing node.js #{version}..." do
+      user install['user']
+      code <<-EOH
+      source #{nvm_dir}/nvm.sh
+      nvm install #{version}
+      nvm alias default #{node['nvm']['version']}
+      EOH
+    end
+
+    # alias default
+    bash "Setting #{version} as default..." do
+      user install['user']
+      code <<-EOH
+      source #{nvm_dir}/nvm.sh
+      nvm alias default #{version}
+      EOH
+      only_if { version == install['default_version'] }
+    end
+
+    # install global packages
+    install['global_packages'].each do |pkg|
+      bash "Installing #{pkg} for #{version}..." do
+        user install['user']
+        code <<-EOH
+        source #{nvm_dir}/nvm.sh
+        npm i -g #{pkg}
+        EOH
+      end
+    end
+  end
 end
