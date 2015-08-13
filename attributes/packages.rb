@@ -67,7 +67,7 @@ default['homebrew']['casks'] = %w(
   font-inconsolata
   flowdock
   flux
-  github
+  github-desktop
   google-chrome
   google-hangouts
   hazel
