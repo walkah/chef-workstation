@@ -20,12 +20,13 @@
 default['nvm']['user_installs'] = [
   {
     'user' => node['user']['id'],
-    'default_version' => 'v0.12',
-    'versions' => ['v0.12', 'v0.10'],
+    'default_version' => 'v4.0',
+    'versions' => ['v4.0', 'v0.12'],
     'global_packages' => [
       'bower',
       'coffee-script',
-      'grunt-cli'
+      'grunt-cli',
+      'npm-check-updates'
     ]
   }
 ]
