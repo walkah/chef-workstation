@@ -20,8 +20,8 @@
 default['nvm']['user_installs'] = [
   {
     'user' => node['user']['id'],
-    'default_version' => 'v4.0',
-    'versions' => ['v4.0', 'v0.12'],
+    'default_version' => 'v4.1',
+    'versions' => ['v4.1', 'v0.12'],
     'global_packages' => [
       'bower',
       'coffee-script',
