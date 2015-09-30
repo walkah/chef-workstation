@@ -65,6 +65,7 @@ default['homebrew']['casks'] = %w(
   dropbox
   firefox
   font-inconsolata
+  font-hack
   flowdock
   flux
   github-desktop
@@ -82,8 +83,6 @@ default['homebrew']['casks'] = %w(
   skype
   slack
   sonos
-  todoist
-  vagrant
   virtualbox
   vmware-fusion
 )
