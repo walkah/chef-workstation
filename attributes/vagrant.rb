@@ -17,6 +17,5 @@
 # limitations under the License.
 #
 
-
 default['vagrant']['plugins'] = ['vagrant-vmware-fusion']
 default['vagrant']['user'] = node['user']['id']
