@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Attributes:: vagrant
 #
 # Copyright (C) 2013 James Walker
 #
@@ -17,12 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe 'workstation::_base'
-include_recipe 'workstation::_packages'
-include_recipe 'workstation::_ruby'
-include_recipe 'workstation::_python'
-include_recipe 'workstation::_nodejs'
-include_recipe 'workstation::_home'
-include_recipe 'workstation::_emacs'
-include_recipe 'workstation::_vagrant'
-include_recipe 'workstation::_settings'
+
+default['vagrant']['plugins'] = ['vagrant-vmware-fusion']
+default['vagrant']['user'] = node['user']['id']
