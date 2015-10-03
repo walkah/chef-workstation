@@ -49,7 +49,6 @@ default['homebrew']['formulas'] = %w(
   postgresql
   pwgen
   redis
-  solr
   ssh-copy-id
   tmux
   wget
@@ -59,14 +58,12 @@ default['homebrew']['casks'] = %w(
   adium
   adobe-creative-cloud
   alfred
-  atom
   chefdk
   dash
   dropbox
   firefox
   font-inconsolata
   font-hack
-  flowdock
   flux
   github-desktop
   google-chrome
@@ -78,11 +75,11 @@ default['homebrew']['casks'] = %w(
   lastpass
   nvalt
   rescuetime
-  rdio
   sequel-pro
   skype
   slack
   sonos
+  spotify
   virtualbox
   vmware-fusion
 )
