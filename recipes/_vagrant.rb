@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: _ruby
+# Recipe:: _vagrant
 #
 # Copyright (C) 2015 James Walker
 #
@@ -17,5 +17,9 @@
 # limitations under the License.
 #
 
-homebrew_cask 'vagrant'
+if platform?('mac_os_x')
+  homebrew_cask 'vagrant'
+else
+  include_recipe 'vagrant'
+end
 include_recipe 'vagrant::install_plugins'
