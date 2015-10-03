@@ -26,7 +26,7 @@ GRAPH
     windows (>= 1.30.2)
   windows (1.38.2)
     chef_handler (>= 0.0.0)
-  workstation (0.11.3)
+  workstation (0.11.4)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)
