@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: workstation
-# Recipe:: default
+# Recipe:: _atom
 #
-# Copyright (C) 2013 James Walker
+# Copyright (C) 2015 James Walker
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,13 +17,14 @@
 # limitations under the License.
 #
 
-include_recipe 'workstation::_base'
-include_recipe 'workstation::_packages'
-include_recipe 'workstation::_ruby'
-include_recipe 'workstation::_python'
-include_recipe 'workstation::_nodejs'
-include_recipe 'workstation::_home'
-include_recipe 'workstation::_emacs'
-include_recipe 'workstation::_atom'
-include_recipe 'workstation::_vagrant'
-include_recipe 'workstation::_settings'
+homebrew_cask 'atom' if platform?('mac_os_x')
+
+bash 'Installing atom packages' do
+  user node['user']['id']
+  code 'apm stars --install'
+end
+
+bash 'Upgrading atom packages' do
+  user node['user']['id']
+  code 'apm upgrade --no-confirm'
+end
