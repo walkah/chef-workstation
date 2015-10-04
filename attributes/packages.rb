@@ -31,13 +31,13 @@ default['homebrew']['formulas'] = %w(
   dnsmasq
   drush
   elasticsearch
+  elixir
   gist
   git
   git-flow
   gsl
   heroku-toolbelt
   htop-osx
-  hub
   imagemagick
   markdown
   mongodb
@@ -55,7 +55,6 @@ default['homebrew']['formulas'] = %w(
 )
 
 default['homebrew']['casks'] = %w(
-  adium
   adobe-creative-cloud
   alfred
   chefdk
