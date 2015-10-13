@@ -9,7 +9,7 @@ DEPENDENCIES
 
 GRAPH
   apt (2.8.2)
-  build-essential (2.2.3)
+  build-essential (2.2.4)
   chef_gem (0.1.0)
   chef_handler (1.2.0)
   dmg (2.2.2)
@@ -26,7 +26,7 @@ GRAPH
     windows (>= 1.30.2)
   windows (1.38.2)
     chef_handler (>= 0.0.0)
-  workstation (0.11.5)
+  workstation (0.11.6)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)
