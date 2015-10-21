@@ -14,4 +14,4 @@ file_cache_path var + '/cache'
 file_backup_path var + '/backup'
 checksum_path file_cache_path + '/checksums'
 
-cache_options(:path => checksum_path, :skip_expires => true)
+cache_options(path: checksum_path, skip_expires: true)
