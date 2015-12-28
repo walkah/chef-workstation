@@ -25,8 +25,8 @@ default['rvm']['user_installs'] = [
   {
     'user' => node['user']['id'],
     'install_rubies'  => true,
-    'default_ruby'    => '2.2.3',
-    'rubies' => ['2.1.6', '2.2.3'],
+    'default_ruby'    => '2.3.0',
+    'rubies' => ['2.2.3', '2.3.0'],
     'rvmrc_env' => {
       'rvm_project_rvmrc'             => 1,
       'rvm_gemset_create_on_use_flag' => 1,
