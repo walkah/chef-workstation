@@ -59,6 +59,7 @@ default['homebrew']['casks'] = %w(
   alfred
   chefdk
   dash
+  dockertoolbox
   dropbox
   firefox
   font-inconsolata
