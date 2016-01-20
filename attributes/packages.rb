@@ -25,7 +25,6 @@ default['homebrew']['taps'] = %w(
 )
 
 default['homebrew']['formulas'] = %w(
-  brew-cask
   composer
   coreutils
   dnsmasq
