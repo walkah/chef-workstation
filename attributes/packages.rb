@@ -19,6 +19,7 @@
 
 default['homebrew']['taps'] = %w(
   homebrew/binary
+  homebrew/command-not-found
   homebrew/dupes
   homebrew/php
   caskroom/fonts
