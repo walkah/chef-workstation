@@ -1,7 +1,7 @@
 DEPENDENCIES
   rvm
     git: https://github.com/martinisoft/chef-rvm.git
-    revision: a5e2a746be9db650e2f36d7a23ec05e984e26431
+    revision: eddd733694a1d3e0872f5692e8dda93aa2752791
     branch: master
   workstation
     path: .
@@ -10,7 +10,7 @@ DEPENDENCIES
 GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
-  apt (2.9.2)
+  apt (3.0.0)
   build-essential (2.3.1)
     7-zip (>= 0.0.0)
   chef_gem (0.1.0)
@@ -28,9 +28,9 @@ GRAPH
   vagrant (0.5.0)
     dmg (>= 2.2.2)
     windows (~> 1.38)
-  windows (1.39.1)
+  windows (1.39.2)
     chef_handler (>= 0.0.0)
-  workstation (0.11.12)
+  workstation (0.12.0)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)
