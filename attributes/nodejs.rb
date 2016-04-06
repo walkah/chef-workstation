@@ -24,7 +24,8 @@ default['nvm']['user_installs'] = [
     'versions' => ['stable'],
     'global_packages' => [
       'coffee-script',
-      'david'
+      'david',
+      'gulp'
     ]
   }
 ]
