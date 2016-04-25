@@ -38,7 +38,7 @@ default['homebrew']['formulas'] = %w(
   git-flow
   gsl
   heroku-toolbelt
-  htop-osx
+  htop
   imagemagick
   markdown
   mongodb
