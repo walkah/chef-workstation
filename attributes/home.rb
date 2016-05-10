@@ -20,8 +20,7 @@
 node.default['homesick']['gem_version'] = '~> 0.9.5'
 node.default['homesick_castles'] = [
   { 'name'   => 'dotfiles',
-    'source' => 'https://github.com/walkah/dotfiles.git'
-  }
+    'source' => 'https://github.com/walkah/dotfiles.git' }
 ]
 
 node.default['repos'] = {
