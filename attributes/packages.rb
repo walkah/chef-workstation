@@ -29,7 +29,6 @@ default['homebrew']['formulas'] = %w(
   composer
   coreutils
   dnsmasq
-  docker-compose
   drush
   elasticsearch
   elixir
@@ -60,6 +59,8 @@ default['homebrew']['casks'] = %w(
   alfred
   chefdk
   dash
+  docker
+  docker-compose
   dropbox
   firefox
   font-inconsolata
