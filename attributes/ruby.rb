@@ -34,7 +34,6 @@ default['rvm']['user_installs'] = [
     },
     'global_gems' => [
       { 'name' => 'bundler' },
-      { 'name' => 'git-up' },
       { 'name' => 'homesick' },
       { 'name' => 'lunchy' },
       { 'name' => 'octopress' },
