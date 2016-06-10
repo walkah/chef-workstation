@@ -29,6 +29,7 @@ default['homebrew']['formulas'] = %w(
   composer
   coreutils
   dnsmasq
+  docker-cloud
   drush
   elasticsearch
   elixir
