@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'pathname'
 
 ssl_verify_mode :verify_peer

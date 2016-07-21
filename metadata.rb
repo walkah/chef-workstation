@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 name 'workstation'
 maintainer 'James Walker'
 maintainer_email 'walkah@walkah.net'
