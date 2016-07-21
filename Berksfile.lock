@@ -1,4 +1,8 @@
 DEPENDENCIES
+  homebrew
+    git: https://github.com/chef-cookbooks/homebrew.git
+    revision: 87a4a2f2a012128e6ca95197744ee571a31a577e
+    branch: master
   rvm
     git: https://github.com/martinisoft/chef-rvm.git
     revision: eddd733694a1d3e0872f5692e8dda93aa2752791
@@ -39,7 +43,7 @@ GRAPH
     windows (~> 1.38)
   windows (1.44.1)
     chef_handler (>= 0.0.0)
-  workstation (0.13.1)
+  workstation (0.13.2)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)
