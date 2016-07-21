@@ -42,6 +42,7 @@ default['homebrew']['formulas'] = %w(
   htop
   imagemagick
   markdown
+  mas
   mongodb
   mtr
   mysql
@@ -71,6 +72,7 @@ default['homebrew']['casks'] = %w(
   github-desktop
   google-chrome
   google-hangouts
+  gpgtools
   hazel
   istat-menus
   iterm2
