@@ -32,7 +32,6 @@ default['homebrew']['formulas'] = %w(
   dnsmasq
   docker-cloud
   drush
-  elasticsearch
   elixir
   gist
   git
@@ -41,14 +40,12 @@ default['homebrew']['formulas'] = %w(
   heroku-toolbelt
   htop
   imagemagick
-  markdown
   mas
   mongodb
   mtr
   mysql
   openssl
   packer
-  php56
   postgresql
   pwgen
   redis
@@ -63,7 +60,6 @@ default['homebrew']['casks'] = %w(
   chefdk
   dash
   docker
-  docker-compose
   dropbox
   firefox
   font-inconsolata
@@ -86,5 +82,4 @@ default['homebrew']['casks'] = %w(
   sonos
   spotify
   virtualbox
-  vmware-fusion
 )
