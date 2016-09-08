@@ -1,8 +1,4 @@
 DEPENDENCIES
-  homebrew
-    git: https://github.com/chef-cookbooks/homebrew.git
-    revision: 87a4a2f2a012128e6ca95197744ee571a31a577e
-    branch: master
   rvm
     git: https://github.com/martinisoft/chef-rvm.git
     revision: eddd733694a1d3e0872f5692e8dda93aa2752791
@@ -12,19 +8,19 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  apt (4.0.1)
+  apt (4.0.2)
     compat_resource (>= 12.10)
-  build-essential (6.0.3)
+  build-essential (6.0.4)
     compat_resource (>= 12.10)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
   chef_gem (0.1.0)
   chef_handler (1.4.0)
-  compat_resource (12.10.7)
+  compat_resource (12.14.1)
   dmg (2.4.0)
-  homebrew (2.1.0)
+  homebrew (2.1.2)
     build-essential (>= 2.1.2)
-  java (1.41.0)
+  java (1.42.0)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     windows (>= 0.0.0)
@@ -35,15 +31,15 @@ GRAPH
   rvm (0.10.1)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
-  seven_zip (2.0.1)
+  seven_zip (2.0.2)
     windows (>= 1.2.2)
-  sudo (2.10.0)
-  vagrant (0.5.0)
+  sudo (2.11.0)
+  vagrant (0.6.0)
     dmg (>= 2.2.2)
     windows (~> 1.38)
-  windows (1.44.1)
+  windows (1.44.3)
     chef_handler (>= 0.0.0)
-  workstation (0.13.3)
+  workstation (0.13.4)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)
