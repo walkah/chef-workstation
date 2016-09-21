@@ -27,11 +27,8 @@ default['homebrew']['taps'] = %w(
 )
 
 default['homebrew']['formulas'] = %w(
-  composer
-  coreutils
   dnsmasq
   docker-cloud
-  drush
   elixir
   gist
   git
@@ -39,16 +36,11 @@ default['homebrew']['formulas'] = %w(
   gsl
   heroku-toolbelt
   htop
-  imagemagick
   mas
-  mongodb
   mtr
-  mysql
   openssl
-  packer
-  postgresql
   pwgen
-  redis
+  reattach-to-user-namespace
   ssh-copy-id
   tmux
   wget
@@ -68,15 +60,14 @@ default['homebrew']['casks'] = %w(
   github-desktop
   google-chrome
   google-hangouts
-  gpgtools
   hazel
   istat-menus
   iterm2
   java
+  keybase
   lastpass
   nvalt
   rescuetime
-  sequel-pro
   skype
   slack
   sonos
