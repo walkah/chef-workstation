@@ -37,7 +37,7 @@ GRAPH
     dmg (>= 2.2.2)
     windows (>= 1.30.2)
   windows (2.0.2)
-  workstation (0.13.5)
+  workstation (0.13.6)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     mac_os_x (>= 0.0.0)

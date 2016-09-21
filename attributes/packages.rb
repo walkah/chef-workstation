@@ -48,7 +48,6 @@ default['homebrew']['formulas'] = %w(
 
 default['homebrew']['casks'] = %w(
   adobe-creative-cloud
-  alfred
   chefdk
   dash
   docker
