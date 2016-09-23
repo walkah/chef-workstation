@@ -36,8 +36,11 @@ default['homebrew']['formulas'] = %w(
   gsl
   heroku-toolbelt
   htop
+  keybase
+  mackup
   mas
   mtr
+  myrepos
   openssl
   pwgen
   reattach-to-user-namespace
@@ -59,11 +62,11 @@ default['homebrew']['casks'] = %w(
   github-desktop
   google-chrome
   google-hangouts
+  gpgtools
   hazel
   istat-menus
   iterm2
   java
-  keybase
   lastpass
   nvalt
   rescuetime
@@ -71,5 +74,6 @@ default['homebrew']['casks'] = %w(
   slack
   sonos
   spotify
+  vagrant
   virtualbox
 )

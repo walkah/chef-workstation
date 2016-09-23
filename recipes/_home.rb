@@ -35,6 +35,12 @@ node['homesick_castles'].each do |castle|
   end
 end
 
+# mackup restore - make sure it's in sync
+bash 'Run mackup restore' do
+  user node['user']['id']
+  code 'mackup -f restore'
+end
+
 require 'etc'
 home_dir = Etc.getpwnam(node['user']['id']).dir
 
