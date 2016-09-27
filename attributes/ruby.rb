@@ -3,7 +3,7 @@
 # Cookbook Name:: workstation
 # Attributes:: ruby
 #
-# Copyright (C) 2013 James Walker
+# Copyright (C) 2016 James Walker
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,30 +18,23 @@
 # limitations under the License.
 #
 
-node.set['rvm']['installs'] = {
-  node['user']['id'] => true
-}
-
-default['rvm']['user_installs'] = [
+default['rbenv']['create_profiled'] = false
+default['rbenv']['user_installs'] = [
   {
     'user' => node['user']['id'],
-    'install_rubies'  => true,
-    'default_ruby'    => '2.3.1',
     'rubies' => ['2.3.1'],
-    'rvmrc_env' => {
-      'rvm_project_rvmrc'             => 1,
-      'rvm_gemset_create_on_use_flag' => 1,
-      'rvm_pretty_print_flag'         => 1
-    },
-    'global_gems' => [
-      { 'name' => 'bundler' },
-      { 'name' => 'homesick' },
-      { 'name' => 'jekyll' },
-      { 'name' => 'lunchy' },
-      { 'name' => 'rails' },
-      { 'name' => 'rubocop' },
-      { 'name' => 'tmuxinator' },
-      { 'name' => 'travis' }
-    ]
+    'global' => '2.3.1',
+    'gems' => {
+      '2.3.1' => [
+        { 'name' => 'bundler' },
+        { 'name' => 'homesick' },
+        { 'name' => 'jekyll' },
+        { 'name' => 'lunchy' },
+        { 'name' => 'rails' },
+        { 'name' => 'rubocop' },
+        { 'name' => 'tmuxinator' },
+        { 'name' => 'travis' }
+      ]
+    }
   }
 ]

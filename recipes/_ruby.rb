@@ -18,4 +18,5 @@
 # limitations under the License.
 #
 
-include_recipe 'rvm::user'
+include_recipe 'ruby_build'
+include_recipe 'ruby_rbenv::user'
