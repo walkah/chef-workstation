@@ -23,26 +23,32 @@ user node['user']['id'] do
   shell '/bin/zsh'
 end
 
+chef_gem 'homesick'
+
+require 'etc'
+home_dir = Etc.getpwnam(node['user']['id']).dir
+env = { 'USER' => node['user']['id'], 'HOME' => home_dir.to_s }
 # Not using chef-homesick to run as non-root (no chef-gem)
 node['homesick_castles'].each do |castle|
-  bash "Adding homesick castle #{castle['name']}" do
+  execute "homesick clone #{castle['source']} --force" do
     user node['user']['id']
-    code <<-EOH
-    homesick clone #{castle['source']} --force
-    homesick pull #{castle['name']} --force
-    homesick symlink #{castle['name']} --force
-    EOH
+    environment env
+  end
+  execute "homesick pull #{castle['name']} --force" do
+    user node['user']['id']
+    environment env
+  end
+  execute "homesick symlink #{castle['name']} --force" do
+    user node['user']['id']
+    environment env
   end
 end
 
 # mackup restore - make sure it's in sync
-bash 'Run mackup restore' do
+execute 'mackup -f restore' do
   user node['user']['id']
-  code 'mackup -f restore'
+  environment env
 end
-
-require 'etc'
-home_dir = Etc.getpwnam(node['user']['id']).dir
 
 # sync all specified git repos
 node['repos'].each do |target, repo|
