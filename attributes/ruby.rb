@@ -29,7 +29,6 @@ default['rbenv']['user_installs'] = [
         { 'name' => 'bundler' },
         { 'name' => 'homesick' },
         { 'name' => 'jekyll' },
-        { 'name' => 'lunchy' },
         { 'name' => 'rails' },
         { 'name' => 'rubocop' },
         { 'name' => 'tmuxinator' },
