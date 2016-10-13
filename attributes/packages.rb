@@ -39,9 +39,11 @@ default['homebrew']['formulas'] = %w(
   keybase
   mackup
   mas
+  mongodb
   mtr
   myrepos
   openssl
+  postgresql
   pwgen
   reattach-to-user-namespace
   ssh-copy-id
@@ -51,6 +53,7 @@ default['homebrew']['formulas'] = %w(
 
 default['homebrew']['casks'] = %w(
   adobe-creative-cloud
+  alfred
   chefdk
   dash
   docker
