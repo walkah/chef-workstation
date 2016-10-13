@@ -23,12 +23,12 @@ user node['user']['id'] do
   shell '/bin/zsh'
 end
 
-chef_gem 'homesick'
+gem_package 'homesick'
 
 require 'etc'
 home_dir = Etc.getpwnam(node['user']['id']).dir
 env = { 'USER' => node['user']['id'], 'HOME' => home_dir.to_s }
-# Not using chef-homesick to run as non-root (no chef-gem)
+
 node['homesick_castles'].each do |castle|
   execute "homesick clone #{castle['source']} --force" do
     user node['user']['id']
