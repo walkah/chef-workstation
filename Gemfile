@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'rubocop'
 gem 'foodcritic'
+gem 'rubocop'
 
 group 'development' do
   gem 'guard'
