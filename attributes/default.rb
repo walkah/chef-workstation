@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 #
 # Cookbook Name:: workstation
 # Attributes:: default
@@ -20,8 +21,10 @@
 
 node.default['user']['id'] = 'walkah'
 
+node.default['authorization']['sudo']['groups'] = []
 node.default['authorization']['sudo']['users'] = ['walkah']
 node.default['authorization']['sudo']['passwordless'] = true
+node.default['authorization']['sudo']['agent_forwarding'] = true
 node.default['authorization']['sudo']['sudoers_defaults'] = [
   'env_reset',
   'env_keep += "BLOCKSIZE"',
