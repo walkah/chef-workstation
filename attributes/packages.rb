@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 #
 # Cookbook Name:: workstation
 # Attributes:: packages
@@ -36,7 +37,6 @@ default['homebrew']['formulas'] = %w(
   gsl
   heroku-toolbelt
   htop
-  keybase
   mackup
   mas
   mongodb
@@ -61,7 +61,6 @@ default['homebrew']['casks'] = %w(
   firefox
   font-inconsolata
   font-hack
-  flux
   github-desktop
   google-chrome
   google-hangouts
@@ -70,6 +69,7 @@ default['homebrew']['casks'] = %w(
   istat-menus
   iterm2
   java
+  keybase
   lastpass
   nvalt
   rescuetime
